@@ -9,9 +9,9 @@ navn = ['Gard', 'Vemund', 'Håkon']
 rom = ['Kjøkken, gang', 'Bad', 'Stue']
 søppel = ['Glass', 'Papp', 'Pant']
 
-random.shuffle(navn)
-random.shuffle(rom)
-random.shuffle(søppel)
+#random.shuffle(navn)
+#random.shuffle(rom)
+#random.shuffle(søppel)
 
 vask = list(zip(navn, rom, søppel))
 
