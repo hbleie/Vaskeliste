@@ -27,5 +27,5 @@ if knapp:
     s.header(tekst1)
     s.header(tekst2)
     s.header(tekst3)
-    s.video('https://www.youtube.com/watch?v=DTGxpA03BlU&ab_channel=StarrySky')
+    
 
