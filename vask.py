@@ -5,6 +5,7 @@ from operator import itemgetter
 from datetime import date
 import calendar
 
+
 navn = ['Gard', 'Vemund', 'Håkon']
 rom = ['Kjøkken, gang', 'Bad', 'Stue']
 søppel = ['Glass', 'Papp', 'Pant']
@@ -15,9 +16,12 @@ søppel = ['Glass', 'Papp', 'Pant']
 
 vask = list(zip(navn, rom, søppel))
 
-tekst1 = vask[0][0] + ': ' + vask[0][1] + ' og ' + vask[0][2]
-tekst2 = vask[1][0] + ': ' + vask[1][1] + ' og ' + vask[1][2]
-tekst3 = vask[2][0] + ': ' + vask[2][1] + ' og ' + vask[2][2]
+fil = open("vaskeliste.txt", "r")
+
+
+tekst1 = fil.readline()
+tekst2 = fil.readline()
+tekst3 = fil.readline()
 
 s.title("Vaskeliste")
 
