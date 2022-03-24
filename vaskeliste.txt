@@ -1,3 +1,3 @@
-Gard: Bad og Pant
-Vemund: Kjøkken, gang og Glass
-Håkon: Stue og Papp
+Gard: Kjøkken, gang og Glass
+Håkon: Bad og Papp
+Vemund: Stue og Pant
