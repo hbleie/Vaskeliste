@@ -17,6 +17,5 @@ s.title("Vaskeliste")
 s.header(tekst1)
 s.header(tekst2)
 s.header(tekst3)
-s.header(calendar.day_name[date.today().weekday()])
     
 
