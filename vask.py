@@ -39,6 +39,6 @@ if knapp:
     tekst2 = vask[1][0] + ': ' + vask[1][1] + ' og ' + vask[1][2]
     tekst3 = vask[2][0] + ': ' + vask[2][1] + ' og ' + vask[2][2]
 
-    fil.write(today + "\n" + tekst1 + "\n" + tekst2 + "\n" + tekst3)
+    fil.write(str(today) + "\n" + tekst1 + "\n" + tekst2 + "\n" + tekst3)
     
 
