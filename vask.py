@@ -2,12 +2,14 @@ import random
 import streamlit as s
 import requests
 from operator import itemgetter
-from datetime import date
+from datetime import date, datetime
 import calendar
 
 fil = open("vaskeliste.txt", "r")
 
+today = date.today()
 
+dato = fil.readline()
 tekst1 = fil.readline()
 tekst2 = fil.readline()
 tekst3 = fil.readline()
@@ -37,6 +39,6 @@ if knapp:
     tekst2 = vask[1][0] + ': ' + vask[1][1] + ' og ' + vask[1][2]
     tekst3 = vask[2][0] + ': ' + vask[2][1] + ' og ' + vask[2][2]
 
-    fil.write(tekst1 + "\n" + tekst2 + "\n" + tekst3)
+    fil.write(today + "\n" + tekst1 + "\n" + tekst2 + "\n" + tekst3)
     
 
