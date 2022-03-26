@@ -17,6 +17,7 @@ dato = dato.split(" ")
 dato[2] = dato[2].replace("\n", "")
 
 s.title("Vaskeliste")
+s.markdown("____")
 
 s.header(tekst1)
 s.header(tekst2)
