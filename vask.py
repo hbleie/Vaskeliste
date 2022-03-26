@@ -4,6 +4,7 @@ import requests
 from operator import itemgetter
 from datetime import date, timedelta
 import calendar
+s.set_page_config(layout="wide")
 
 fil = open("vaskeliste.txt", "r")
 
@@ -33,11 +34,11 @@ with col1:
     s.header(tekst1[0]) 
     s.write(tekst1[1])
 with col2:
-    s.write(tekst2[0])
-    s.metric("", tekst2[1])
+    s.header(tekst2[0])
+    s.write(tekst2[1])
 with col3:
-    s.write(tekst3[0])
-    s.metric("", tekst3[1])
+    s.header(tekst3[0])
+    s.write(tekst3[1])
 
 s.sidebar.image('_dsc8499.jpg')
 
