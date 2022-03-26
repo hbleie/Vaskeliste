@@ -22,6 +22,7 @@ s.markdown("____")
 s.header(tekst1)
 s.header(tekst2)
 s.header(tekst3)
+s.image('_dsc8499.jpg')
 
 def sistoppdatering(idag, siste):
     today_date = date(int(idag[0]), int(idag[1]), int(idag[2]))
