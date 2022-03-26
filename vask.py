@@ -38,7 +38,8 @@ with col3:
     s.write(tekst3[0])
     s.metric("", tekst3[1])
 
-s.image('_dsc8499.jpg')
+bilde = s.image('_dsc8499.jpg')
+s.sidebar(bilde)
 
 def sistoppdatering(idag, siste):
     today_date = date(int(idag[0]), int(idag[1]), int(idag[2]))
