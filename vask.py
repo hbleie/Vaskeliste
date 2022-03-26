@@ -1,9 +1,8 @@
 import random
 import streamlit as s
-import requests
-from operator import itemgetter
 from datetime import date, timedelta
 import calendar
+import pandas as pd
 s.set_page_config(layout="wide")
 
 fil = open("vaskeliste.txt", "r")
@@ -31,8 +30,7 @@ s.markdown("____")
 col1, col2, col3 = s.columns(3)
 
 with col1:
-    s.write(tekst1[0]) 
-    s.write(tekst1[1])
+    s.table(pd.DataFrame(tekst1[1], columns = (tekst1[0])))
 with col2:
     s.write(tekst2[0])
     s.write(tekst2[1])
