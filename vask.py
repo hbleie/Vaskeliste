@@ -28,9 +28,16 @@ s.title("Vaskeliste")
 s.markdown("____")
 
 col1, col2, col3 = s.columns(3)
-col1.metric(tekst1[0], tekst1[1])
-col2.metric(tekst2[0], tekst1[1])
-col3.metric(tekst3[0], tekst3[1])
+with col1:
+    s.header(tekst1[0])
+    s.metric("", tekst1[1])
+with col2:
+    s.header(tekst2[0])
+    s.metric("", tekst2[1])
+with col3:
+    s.header(tekst3[0])
+    s.metric("", tekst3[1])
+
 s.image('_dsc8499.jpg')
 
 def sistoppdatering(idag, siste):
