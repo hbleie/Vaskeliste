@@ -40,7 +40,7 @@ with col3:
     s.header(tekst3[0])
     s.write(tekst3[1])
 
-s.sidebar.image('_dsc8499.jpg')
+s.image('_dsc8499.jpg')
 
 def sistoppdatering(idag, siste):
     today_date = date(int(idag[0]), int(idag[1]), int(idag[2]))
