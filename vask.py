@@ -27,12 +27,14 @@ dato[2] = dato[2].replace("\n", "")
 s.title("Vaskeliste")
 s.markdown("____")
 
-d = {'Navn': [tekst1[0], tekst2[0], tekst3[0]], 'Oppgave': [tekst1[1], tekst2[1], tekst3[1]]}
-s.table(pd.DataFrame(data=d))
+col1, col2 = s.columns(2)
 
+with col1:
+    d = {'Navn': [tekst1[0], tekst2[0], tekst3[0]], 'Oppgave': [tekst1[1], tekst2[1], tekst3[1]]}
+    s.table(pd.DataFrame(data=d))
 
-
-s.sidebar.image('_dsc8499.jpg')
+with col2:
+    s.sidebar.image('_dsc8499.jpg')
 
 def sistoppdatering(idag, siste):
     today_date = date(int(idag[0]), int(idag[1]), int(idag[2]))
