@@ -27,16 +27,9 @@ dato[2] = dato[2].replace("\n", "")
 s.title("Vaskeliste")
 s.markdown("____")
 
-col1, col2, col3 = s.columns(3)
+d = {'Navn': [tekst1[0], tekst2[0], tekst3[0]], 'Oppgave': [tekst1[1], tekst2[1], tekst3[1]]}
+s.table(pd.DataFrame(data=d))
 
-with col1:
-    s.table(pd.DataFrame(tekst1[1], columns = (tekst1[0])))
-with col2:
-    s.write(tekst2[0])
-    s.write(tekst2[1])
-with col3:
-    s.write(tekst3[0])
-    s.write(tekst3[1])
 
 
 s.sidebar.image('_dsc8499.jpg')
