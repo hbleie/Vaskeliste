@@ -34,7 +34,7 @@ with col1:
     s.table(pd.DataFrame(data=d))
 
 with col2:
-    s.sidebar.image('_dsc8499.jpg')
+    s.image('_dsc8499.jpg')
 
 def sistoppdatering(idag, siste):
     today_date = date(int(idag[0]), int(idag[1]), int(idag[2]))
