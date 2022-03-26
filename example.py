@@ -13,6 +13,8 @@ tekst1 = fil.readline()
 tekst2 = fil.readline()
 tekst3 = fil.readline()
 
+tekst1 = tekst1.split(":")
+
 dato = dato.split(" ")
 dato[2] = dato[2].replace("\n", "")
 
@@ -61,3 +63,5 @@ if sistoppdatering(today, dato) > 7:
     fil.write(søndag[0] + ' '  + søndag[1] + ' ' + søndag[2] + "\n" + tekst1 + "\n" + tekst2 + "\n" + tekst3)
         
 fil.close()
+
+print(tekst1)

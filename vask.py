@@ -10,8 +10,16 @@ fil = open("vaskeliste.txt", "r")
 today = str(date.today()).split('-')
 dato = fil.readline()
 tekst1 = fil.readline()
+tekst1 = tekst1.split(": ")
+
+tekst1[1] = tekst1[1].replace("\n", "")
 tekst2 = fil.readline()
+tekst2 = tekst2.split(": ")
+tekst2[1] = tekst2[1].replace("\n", "")
+
 tekst3 = fil.readline()
+tekst3 = tekst3.split(": ")
+tekst3[1] = tekst3[1].replace("\n", "")
 
 dato = dato.split(" ")
 dato[2] = dato[2].replace("\n", "")
@@ -20,9 +28,9 @@ s.title("Vaskeliste")
 s.markdown("____")
 
 col1, col2, col3 = s.columns(3)
-col1.header(tekst1)
-col2.header(tekst2)
-col3.header(tekst3)
+col1.metric(tekst1[0], tekst1[1])
+col2.metric(tekst2[0], tekst1[1])
+col3.metric(tekst3[0], tekst3[1])
 s.image('_dsc8499.jpg')
 
 def sistoppdatering(idag, siste):
