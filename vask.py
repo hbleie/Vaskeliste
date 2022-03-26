@@ -30,7 +30,8 @@ s.markdown("____")
 col1, col2, col3 = s.columns(3)
 
 with col1:
-    s.metric("", tekst1[0], tekst1[1])
+    s.header(tekst1[0]) 
+    s.write(tekst1[1])
 with col2:
     s.write(tekst2[0])
     s.metric("", tekst2[1])
