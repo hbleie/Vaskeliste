@@ -63,8 +63,8 @@ def finnSøndag():
     else:
         return date.today()
 
-
-if sistoppdatering(today, dato) > 7:
+knapp = s.button('knapp')
+if knapp:
     navn = ['Gard', 'Vemund', 'Håkon']
     rom = ['Kjøkken, gang', 'Bad', 'Stue']
     søppel = ['Glass', 'Papp', 'Pant']
