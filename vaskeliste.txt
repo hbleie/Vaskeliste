@@ -1,4 +1,4 @@
 2022 03 20
-Håkon: Stue og Glass
-Vemund: Kjøkken, gang og Pant
-Gard: Bad og Papp
+Håkon Bad og Papp
+Gard Kjøkken, gang og Pant
+Vemund Stue og Glass

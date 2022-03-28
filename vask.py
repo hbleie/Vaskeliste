@@ -6,9 +6,11 @@ import pandas as pd
 s.set_page_config(layout="wide")
 
 fil = open("vaskeliste.txt", "r")
+s.title("Vaskeliste")
 
 today = str(date.today()).split('-')
 dato = fil.readline()
+s.write("sist oppdatert: " + dato)
 tekst1 = fil.readline()
 tekst1 = tekst1.split(": ")
 
@@ -24,8 +26,9 @@ tekst3[1] = tekst3[1].replace("\n", "")
 dato = dato.split(" ")
 dato[2] = dato[2].replace("\n", "")
 
-s.title("Vaskeliste")
+
 s.markdown("____")
+
 
 col1, col2 = s.columns(2)
 
