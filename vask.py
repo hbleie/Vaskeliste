@@ -12,15 +12,15 @@ today = str(date.today()).split('-')
 dato = fil.readline()
 s.write("sist oppdatert: " + dato)
 tekst1 = fil.readline()
-tekst1 = tekst1.split(": ")
+tekst1 = tekst1.split(":")
 
 tekst1[1] = tekst1[1].replace("\n", "")
 tekst2 = fil.readline()
-tekst2 = tekst2.split(": ")
+tekst2 = tekst2.split(":")
 tekst2[1] = tekst2[1].replace("\n", "")
 
 tekst3 = fil.readline()
-tekst3 = tekst3.split(": ")
+tekst3 = tekst3.split(":")
 tekst3[1] = tekst3[1].replace("\n", "")
 
 dato = dato.split(" ")
