@@ -29,7 +29,7 @@ s.write("Sist oppdatert: " + dato[2]+ "/" + dato[1] + "/" + dato[0])
 
 s.markdown("____")
 
-
+fil.close()
 col1, col2 = s.columns(2)
 
 with col1:
@@ -83,6 +83,8 @@ if sistoppdatering(today, dato) > 7:
     tekst3 = vask[2][0] + ': ' + vask[2][1] + ' og ' + vask[2][2]
 
     fil.write(søndag[0] + ' '  + søndag[1] + ' ' + søndag[2] + "\n" + tekst1 + "\n" + tekst2 + "\n" + tekst3)
+
+    fil.close()
     
     
 
