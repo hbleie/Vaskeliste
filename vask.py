@@ -12,15 +12,15 @@ today = str(date.today()).split('-')
 dato = fil.readline()
 s.write("sist oppdatert: " + dato)
 tekst1 = fil.readline()
-tekst1 = tekst1.split(":")
+tekst1 = tekst1.split(": ")
 s.write(tekst1)
 tekst1[1] = tekst1[1].replace("\n", "")
 tekst2 = fil.readline()
-tekst2 = tekst2.split(":")
+tekst2 = tekst2.split(": ")
 tekst2[1] = tekst2[1].replace("\n", "")
 
 tekst3 = fil.readline()
-tekst3 = tekst3.split(":")
+tekst3 = tekst3.split(": ")
 tekst3[1] = tekst3[1].replace("\n", "")
 
 dato = dato.split(" ")
@@ -78,9 +78,9 @@ if sistoppdatering(today, dato) > 7:
     fil = open("vaskeliste.txt", "w")
 
     søndag = str(finnSøndag()).split("-")
-    tekst1 = vask[0][0] + ' ' + vask[0][1] + ' og ' + vask[0][2]
-    tekst2 = vask[1][0] + ' ' + vask[1][1] + ' og ' + vask[1][2]
-    tekst3 = vask[2][0] + ' ' + vask[2][1] + ' og ' + vask[2][2]
+    tekst1 = vask[0][0] + ': ' + vask[0][1] + ' og ' + vask[0][2]
+    tekst2 = vask[1][0] + ': ' + vask[1][1] + ' og ' + vask[1][2]
+    tekst3 = vask[2][0] + ': ' + vask[2][1] + ' og ' + vask[2][2]
 
     fil.write(søndag[0] + ' '  + søndag[1] + ' ' + søndag[2] + "\n" + tekst1 + "\n" + tekst2 + "\n" + tekst3)
     
