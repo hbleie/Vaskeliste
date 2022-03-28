@@ -13,7 +13,7 @@ dato = fil.readline()
 s.write("sist oppdatert: " + dato)
 tekst1 = fil.readline()
 tekst1 = tekst1.split(":")
-
+s.write(tekst1)
 tekst1[1] = tekst1[1].replace("\n", "")
 tekst2 = fil.readline()
 tekst2 = tekst2.split(":")
