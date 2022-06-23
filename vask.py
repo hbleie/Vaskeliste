@@ -68,7 +68,7 @@ def finnSøndag():
 
 
 if sistoppdatering(today, dato) > 7:
-    navn = ['Ola', 'Vemund', 'Håkon']
+    navn = ['Nymann', 'Vemund', 'Håkon']
     rom = ['Kjøkken, gang', 'Bad', 'Stue']
     søppel = ['Glass', 'Papp', 'Pant']
 
