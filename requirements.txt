@@ -1,2 +1,5 @@
-
-pip freeze > requirements.txt
+random
+streamlit
+datetime
+calendar
+pandas
