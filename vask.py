@@ -25,7 +25,7 @@ tekst3[1] = tekst3[1].replace("\n", "")
 
 dato = dato.split(" ")
 dato[2] = dato[2].replace("\n", "")
-s.write("Sist oppdatert: " + dato[2]+ "/" + dato[1] + "/" + dato[0])
+s.write("Sist oppdatert: " + dato[2] + "/" + dato[1] + "/" + dato[0])
 
 s.markdown("____")
 
@@ -33,17 +33,20 @@ fil.close()
 col1, col2 = s.columns(2)
 
 with col1:
-    d = {'Navn': [tekst1[0], tekst2[0], tekst3[0]], 'Oppgave': [tekst1[1], tekst2[1], tekst3[1]]}
+    d = {'Navn': [tekst1[0], tekst2[0], tekst3[0]],
+         'Oppgave': [tekst1[1], tekst2[1], tekst3[1]]}
     s.table(pd.DataFrame(data=d))
 
 with col2:
     s.image('_dsc8499.jpg')
+
 
 def sistoppdatering(idag, siste):
     today_date = date(int(idag[0]), int(idag[1]), int(idag[2]))
     siste_date = date(int(siste[0]), int(siste[1]), int(siste[2]))
     delta = today_date-siste_date
     return delta.days
+
 
 def finnSøndag():
     idag = date.today()
@@ -82,8 +85,7 @@ if sistoppdatering(today, dato) > 7:
     tekst2 = vask[1][0] + ': ' + vask[1][1] + ' og ' + vask[1][2]
     tekst3 = vask[2][0] + ': ' + vask[2][1] + ' og ' + vask[2][2]
 
-    fil.write(søndag[0] + ' '  + søndag[1] + ' ' + søndag[2] + "\n" + tekst1 + "\n" + tekst2 + "\n" + tekst3)
+    fil.write(søndag[0] + ' ' + søndag[1] + ' ' + søndag[2] +
+              "\n" + tekst1 + "\n" + tekst2 + "\n" + tekst3)
 
     fil.close()
-    
-    
