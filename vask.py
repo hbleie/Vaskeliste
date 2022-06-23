@@ -87,4 +87,3 @@ if sistoppdatering(today, dato) > 7:
     fil.close()
     
     
-
