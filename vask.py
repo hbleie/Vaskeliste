@@ -5,40 +5,17 @@ import calendar
 import pandas as pd
 s.set_page_config(layout="wide")
 
-fil = open("vaskeliste.txt", "r")
 s.title("Vaskeliste")
 
+fil = open("vaskeliste.txt", "r")
 today = str(date.today()).split('-')
 dato = fil.readline()
-
-tekst1 = fil.readline()
-tekst1 = tekst1.split(": ")
-tekst1[1] = tekst1[1].replace("\n", "")
-
-tekst2 = fil.readline()
-tekst2 = tekst2.split(": ")
-tekst2[1] = tekst2[1].replace("\n", "")
-
-tekst3 = fil.readline()
-tekst3 = tekst3.split(": ")
-tekst3[1] = tekst3[1].replace("\n", "")
-
 dato = dato.split(" ")
 dato[2] = dato[2].replace("\n", "")
+
 s.write("Sist oppdatert: " + dato[2] + "/" + dato[1] + "/" + dato[0])
-
 s.markdown("____")
-
 fil.close()
-col1, col2 = s.columns(2)
-
-with col1:
-    d = {'Navn': [tekst1[0], tekst2[0], tekst3[0]],
-         'Oppgave': [tekst1[1], tekst2[1], tekst3[1]]}
-    s.table(pd.DataFrame(data=d))
-
-with col2:
-    s.image('_dsc8499.jpg')
 
 
 def sistoppdatering(idag, siste):
@@ -68,7 +45,7 @@ def finnSøndag():
 
 
 if sistoppdatering(today, dato) > 7:
-    navn = ['Gard', 'Vemund', 'Håkon']
+    navn = ['Nymann', 'Vemund', 'Håkon']
     rom = ['Kjøkken, gang', 'Bad', 'Stue']
     søppel = ['Glass', 'Papp', 'Pant']
 
@@ -89,3 +66,30 @@ if sistoppdatering(today, dato) > 7:
               "\n" + tekst1 + "\n" + tekst2 + "\n" + tekst3)
 
     fil.close()
+
+fil = open("vaskeliste.txt", "r")
+dato = fil.readline()
+tekst1 = fil.readline()
+tekst1 = tekst1.split(": ")
+tekst1[1] = tekst1[1].replace("\n", "")
+
+tekst2 = fil.readline()
+tekst2 = tekst2.split(": ")
+tekst2[1] = tekst2[1].replace("\n", "")
+
+tekst3 = fil.readline()
+tekst3 = tekst3.split(": ")
+tekst3[1] = tekst3[1].replace("\n", "")
+
+fil.close()
+
+
+col1, col2 = s.columns(2)
+
+with col1:
+    d = {'Navn': [tekst1[0], tekst2[0], tekst3[0]],
+         'Oppgave': [tekst1[1], tekst2[1], tekst3[1]]}
+    s.table(pd.DataFrame(data=d))
+
+with col2:
+    s.image('_dsc8499.jpg')

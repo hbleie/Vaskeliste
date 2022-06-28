@@ -1,4 +1,4 @@
 2022 06 26
-Håkon: Stue og Pant
-Gard: Bad og Papp
-Vemund: Kjøkken, gang og Glass
+Håkon: Bad og Glass
+Vemund: Stue og Pant
+Nymann: Kjøkken, gang og Papp
